@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { Logo } from '@/components/logo'
 
 const navLinks = [
   { href: '/esemenyek', label: 'Események' },
@@ -22,18 +23,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-8">
           {/* Logo – left */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 shrink-0"
-            aria-label="Jegygo főoldal"
-          >
-            <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-900 text-amber-400 font-black text-sm">
-              J
-            </span>
-            <span className="text-slate-900 font-bold text-lg tracking-tight hidden sm:inline">
-              jegy<span className="text-amber-600">go</span>
-            </span>
-          </Link>
+          <Logo variant="header" href="/" />
 
           {/* Nav – center (desktop) */}
           <nav

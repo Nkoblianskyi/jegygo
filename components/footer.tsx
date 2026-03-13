@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Mail } from 'lucide-react'
+import { Logo } from '@/components/logo'
 
 const partnerNames = [
   'Jegy.hu',
@@ -40,14 +41,7 @@ export function Footer() {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* One row: logo | inline nav | email */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10">
-          <Link href="/" className="flex items-center gap-2 w-fit" aria-label="Jegygo főoldal">
-            <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-amber-500 text-slate-900 font-black text-lg">
-              J
-            </span>
-            <span className="text-white font-bold text-xl tracking-tight">
-              jegy<span className="text-amber-400">go</span>
-            </span>
-          </Link>
+          <Logo variant="footer" href="/" className="sm:inline-flex" />
 
           <nav
             className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm"

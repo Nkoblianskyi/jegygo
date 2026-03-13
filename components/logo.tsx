@@ -48,7 +48,7 @@ export function Logo({ variant = 'header', className = '', href = '/', showWordm
     <>
       <LogoIcon variant={variant} />
       {showWordmark && (
-        <span className={`font-bold text-lg sm:text-xl tracking-tight ${isFooter ? 'text-white inline' : 'text-slate-900 hidden sm:inline'}`}>
+        <span className={`font-bold text-lg sm:text-xl tracking-tight ${isFooter ? 'text-white inline' : 'text-slate-900 inline'}`}>
           jegy<span className={isFooter ? 'text-amber-500' : 'text-amber-600'}>go</span>
         </span>
       )}

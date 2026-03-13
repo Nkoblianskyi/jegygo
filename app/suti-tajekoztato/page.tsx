@@ -12,7 +12,7 @@ export default function SutiTajekoztato() {
       <section className="bg-[#0f172a] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-3">Süti tájékoztató</h1>
-          <p className="text-slate-400">Utolsó módosítás: 2025. január 1.</p>
+          <p className="text-slate-400">Utolsó módosítás: 2026</p>
         </div>
       </section>
 

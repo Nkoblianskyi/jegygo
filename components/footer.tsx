@@ -41,7 +41,7 @@ export function Footer() {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* One row: logo | inline nav | email */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10">
-          <Logo variant="footer" href="/" className="sm:inline-flex" />
+          <Logo variant="footer" href="/" className="inline-flex items-center gap-2" />
 
           <nav
             className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm"

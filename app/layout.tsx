@@ -19,6 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Jegygo – Összehasonlítod a jegyárakat, mi megmutatjuk a legjobbat',
+  icons: { icon: '/icon.svg', shortcut: '/icon.svg' },
   description:
     'Jegygo független jegyár-összehasonlító. Egy helyen látod a Jegy.hu, Eventim és további megbízható partnerek árait – válaszd a legjobb ajánlatot.',
   keywords: 'jegy, esemény, koncert, sport, színház, árösszehasonlítás, jegygo, Magyarország',

@@ -11,11 +11,11 @@ interface LogoProps {
   showWordmark?: boolean
 }
 
-/** Shared icon: dark rounded square + 3 golden elements (top circle, arrow, bottom circle) */
+/** Квиток з музичною нотою – концертний стиль */
 const LogoIcon = ({ variant }: { variant: LogoVariant }) => {
   const isFooter = variant === 'footer'
-  const bg = isFooter ? '#fbbf24' : '#0f172a'
-  const fg = isFooter ? '#0f172a' : '#f59e0b'
+  const ticketBg = isFooter ? '#fbbf24' : '#0f172a'
+  const noteColor = isFooter ? '#0f172a' : '#f59e0b'
 
   return (
     <svg
@@ -23,12 +23,17 @@ const LogoIcon = ({ variant }: { variant: LogoVariant }) => {
       className="w-9 h-9 sm:w-10 sm:h-10 shrink-0"
       aria-hidden
     >
-      <rect x="0" y="0" width="40" height="40" rx="8" fill={bg} />
-      <circle cx="20" cy="9" r="3" fill={fg} />
-      <circle cx="20" cy="31" r="3" fill={fg} />
-      {/* Arrow "go" – triangle + bar */}
-      <path d="M14 18h4v2h-4v2l6-3-6-3v2z" fill={fg} />
-      <rect x="18" y="20" width="8" height="2.5" rx="1" fill={fg} />
+      {/* Форма квитка: прямокутник з двома круглими вирізами зліва (перфорація) */}
+      <path
+        d="M8 4h24c2.2 0 4 1.8 4 4v5.8a2.2 2.2 0 0 1 0 4.4V32c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4v-5.8a2.2 2.2 0 0 1 0-4.4V8c0-2.2 1.8-4 4-4zm0 6v4.2a4 4 0 0 0 0 7.6V30h24v-8.2a4 4 0 0 0 0-7.6V10H8z"
+        fill={ticketBg}
+      />
+      {/* Музична нота ♪ */}
+      <g fill={noteColor}>
+        <ellipse cx="26" cy="21" rx="3" ry="2.4" />
+        <path d="M26 19v-7l2.5 1.8" stroke={noteColor} strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <line x1="26" y1="19" x2="26" y2="27" stroke={noteColor} strokeWidth="1.3" strokeLinecap="round" />
+      </g>
     </svg>
   )
 }
